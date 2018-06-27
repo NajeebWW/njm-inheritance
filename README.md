@@ -1,0 +1,2 @@
+# njm-inheritance
+Inheritance App
