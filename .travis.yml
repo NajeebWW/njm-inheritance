@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "8.9"
+
+# Require sudo superuser privileges
+sudo: required
+
+#Enable docker service usage
+services:
+  - docker
+
+#Run custom script for develop, master & release branches
+deploy:
+  - provider: script
+    script: bash ./framework/scrips/BuildApp.sh
+    on:
+      branch: develop
+  - provider: script
+    script: bash ./framework/scrips/BuildApp.sh
+    on:
+      branch: master
+  - provider: script
+    script: bash ./framework/scrips/BuildApp.sh
+    on:
+      all_branches: true
+      condition: $TRAVIS_BRANCH =~ ^release\/.*$
