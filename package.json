@@ -1,0 +1,12 @@
+{
+  "name": "njm-inheritance",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "coverage": "echo \"Error: no coverage specified\" && exit 0"
+  },
+  "dependencies": {
+    
+  }
+}
